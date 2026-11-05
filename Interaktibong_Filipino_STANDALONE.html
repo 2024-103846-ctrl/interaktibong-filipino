@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#202923">
+  <title>Interaktibong Filipino — Silid-Aralan ng mga Ideya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
+:root{--ink:#202923;--paper:#f0ecdf;--paper2:#e6dfce;--rust:#a94f36;--gold:#c49b55;--sage:#788574;--muted:#77776b;--line:rgba(32,41,35,.18);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--sans)}body{overflow:hidden}.grain{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4.2vw;position:relative;z-index:4;background:rgba(240,236,223,.94)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.brand-mark{font:700 20px var(--serif);border:1px solid var(--ink);width:40px;height:40px;display:grid;place-items:center;letter-spacing:-2px}.brand-mark span{color:var(--rust)}.brand-copy{display:flex;flex-direction:column;gap:3px}.brand-copy strong{font-size:10px;letter-spacing:1.5px}.brand-copy small{font:10px var(--mono);color:var(--muted)}.top-meta{display:flex;align-items:center;gap:12px;font:10px var(--mono);letter-spacing:1px;color:var(--muted)}.live-dot,.mode-dot{width:7px;height:7px;background:var(--rust);border-radius:50%;display:inline-block}.meta-divider{height:15px;width:1px;background:var(--line)}.top-actions{display:flex;gap:10px}.icon-btn,.menu-btn{border:1px solid var(--line);background:transparent;color:var(--ink);height:38px;padding:0 13px;cursor:pointer}.icon-btn{font-size:22px;width:40px}.menu-btn{font:10px var(--mono);letter-spacing:1px}.menu-btn span{margin-left:12px}.stage{height:calc(100vh - 76px);display:flex}.rail{width:92px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:30px 0 22px;flex-shrink:0}.rail-label,.rail-bottom{font:9px var(--mono);letter-spacing:1.5px;color:var(--muted);text-align:center}.rail-track{display:flex;flex-direction:column;align-items:center;margin-top:20px;flex:1}.rail-step{border:0;background:transparent;color:#99978a;font:10px var(--mono);width:32px;height:27px;cursor:pointer;transition:.2s}.rail-step.active{background:var(--ink);color:var(--paper);border-radius:50%}.rail-step.visited{color:var(--rust)}.rail-track i{height:22px;width:1px;background:var(--line)}.rail-bottom{line-height:1.8}.presentation{flex:1;min-width:0;display:flex;flex-direction:column}.slides{position:relative;flex:1;min-height:0;overflow:hidden}.slide{position:absolute;inset:0;padding:5.1vh 6.2vw 58px;overflow:auto;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .38s ease,transform .38s ease,visibility .38s;display:flex;flex-direction:column}.slide.active{opacity:1;visibility:visible;transform:translateY(0);z-index:1}.slide-foot{position:absolute;bottom:19px;left:6.2vw;right:6.2vw;display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:1px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}.eyebrow,.section-kicker,.card-topline,.micro-note,.reading-tools,.aside-label,.column-no,.lens-index,.lens-example b,.response-label,.response-prompts,.timer-label,.writing-card label,.final-index,.outline-head,.outline-panel>p{font:9px var(--mono);letter-spacing:1.35px}.eyebrow{color:var(--rust);margin:0 0 20px}.section-kicker{display:flex;align-items:center;gap:12px;color:var(--muted);margin-bottom:32px}.kicker-no{color:var(--rust);font-size:12px}.kicker-line{height:1px;background:var(--line);flex:1}.kicker-time{font-size:8px}.hero-slide{background:#202923;color:#f0ecdf;padding-top:8vh}.hero-slide .eyebrow{color:#d3a66c}.hero-copy{position:relative;z-index:2;width:59%;max-width:740px}.hero-copy h1{font:600 clamp(42px,5.6vw,82px)/1.07 var(--serif);letter-spacing:-2.5px;margin:0}.hero-copy h1 em,.slide h2 em{color:#bd7959;font-weight:500}.hero-deck{font-size:15px;line-height:1.8;color:#c8c9bd;max-width:430px;margin:27px 0 38px}.hero-bottom{display:flex;align-items:center;gap:28px}.primary-btn{background:var(--rust);color:#fff;border:0;padding:15px 20px;font:600 11px var(--sans);letter-spacing:.2px;cursor:pointer}.primary-btn span{font-size:17px;margin-left:20px}.micro-note{color:#aeb3a7;font-size:8px;line-height:1.8}.hero-art{position:absolute;right:7%;top:9%;width:40%;height:75%;max-width:540px}.sun-disc{position:absolute;width:270px;height:270px;border-radius:50%;background:#bd7959;right:12%;top:7%;opacity:.9}.paper-sheet{position:absolute;z-index:2;width:48%;height:76%;background:#e8dfc9;right:26%;top:9%;transform:rotate(5deg);box-shadow:15px 20px 40px #1119;padding:23px;color:var(--ink)}.paper-no{font:8px var(--mono);letter-spacing:1px}.paper-lines{margin-top:42px;height:46%;background:repeating-linear-gradient(to bottom,transparent 0 18px,#7b806f66 19px 20px)}.paper-stamp{position:absolute;bottom:24px;right:22px;border:1px solid var(--rust);color:var(--rust);font:700 14px var(--mono);text-align:center;padding:10px;transform:rotate(-9deg)}.woven{position:absolute;width:120px;height:150px;background:repeating-linear-gradient(0deg,transparent 0 10px,#d3a66c 11px 13px),repeating-linear-gradient(90deg,transparent 0 10px,#d3a66c 11px 13px);opacity:.65}.woven-a{right:0;bottom:9%;transform:rotate(13deg)}.woven-b{left:0;top:28%;transform:rotate(-18deg);opacity:.32}.art-caption{position:absolute;bottom:3%;left:2%;font:8px var(--mono);line-height:1.7;letter-spacing:1px;color:#c8c9bd}
+.slide h2{font:600 clamp(37px,4.5vw,64px)/1.08 var(--serif);letter-spacing:-1.8px;margin:0 0 20px}.body-copy{color:#66695f;font-size:13px;line-height:1.85;max-width:410px}.split-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center;flex:1}.clue-list{margin-top:35px;border-top:1px solid var(--line);max-width:430px}.clue-list div{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}.clue-list b,.task-steps b{font:10px var(--mono);color:var(--rust)}.activity-card,.detective-panel,.final-question,.writing-card{background:#e7e1d3;border:1px solid #d8d0bd;padding:25px 28px;box-shadow:0 12px 35px #3c34200b}.card-topline{display:flex;justify-content:space-between;color:var(--muted);font-size:8px;border-bottom:1px solid var(--line);padding-bottom:13px}.prompt{font:600 17px/1.45 var(--serif);margin:22px 0}.choice-stack{display:flex;flex-direction:column;gap:8px}.choice{width:100%;text-align:left;padding:13px 14px;border:1px solid #d0c8b8;background:#f0ecdf;color:var(--ink);font:12px/1.5 var(--sans);cursor:pointer;transition:.18s}.choice:hover{border-color:var(--rust);transform:translateX(3px)}.choice.selected{border-color:var(--rust);background:#f3e3d9}.choice.correct{border-color:#657c63;background:#e2e8dc}.choice.incorrect{border-color:#ad5c47;background:#f1ded6}.feedback{font-size:11px;line-height:1.7;margin-top:13px;padding:12px;border-left:2px solid var(--sage);background:#e0e5d9}.text-btn,.quiet-btn{border:0;background:transparent;color:var(--rust);font:600 10px var(--sans);padding:14px 0 0;cursor:pointer}.text-btn span{margin-left:8px}.topic-heading{display:flex;align-items:end;justify-content:space-between;gap:30px}.topic-heading h2{max-width:700px}.definition-band{background:var(--ink);color:var(--paper);display:flex;align-items:center;gap:25px;padding:24px 30px;margin:18px 0 28px}.big-quote{font:80px var(--serif);color:#c17b5b;line-height:.7}.definition-band p{font:500 17px/1.55 var(--serif);max-width:780px;margin:0}.definition-tag{font:8px var(--mono);letter-spacing:1px;color:#c6ad85;white-space:nowrap;margin-left:auto}.three-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.three-columns>div{border-top:1px solid var(--line);padding-top:14px}.column-no{color:var(--rust)}.three-columns h3,.lens-card h3{font:600 22px var(--serif);margin:12px 0 7px}.three-columns p,.lens-card p{font-size:11px;line-height:1.7;color:#686a60;margin:0;max-width:270px}
+.reading-slide{background:#e7e0d0}.reading-grid{display:grid;grid-template-columns:70px 1fr 220px;gap:35px;max-width:1120px;margin:auto;width:100%;align-items:start}.reading-margin{display:flex;flex-direction:column;align-items:center;gap:24px;color:var(--rust)}.vertical-word{writing-mode:vertical-rl;font:10px var(--mono);letter-spacing:4px}.margin-number{font:34px var(--serif);color:#b5a98f}.margin-note{writing-mode:vertical-rl;font:7px var(--mono);letter-spacing:1px;color:var(--muted)}.reading-content h2{font-size:clamp(38px,4vw,58px);margin-bottom:22px}.prose{max-width:650px;font:15px/1.95 var(--serif);color:#363c35}.prose p{margin:0 0 16px}.reading-tools{display:flex;gap:20px;border-top:1px solid var(--line);padding-top:13px;margin-top:26px;color:var(--muted);font-size:8px}.reading-aside{border-left:1px solid var(--line);padding-left:20px;margin-top:60px}.aside-label{color:var(--rust)}.reading-aside p,.reading-aside li{font-size:11px;line-height:1.7;color:#66695f}.reading-aside ul{padding-left:17px}.aside-question{background:#d8d0bd;padding:14px;font:italic 14px/1.5 var(--serif);margin-top:20px}
+.detective-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:center;flex:1}.detective-intro{position:relative}.detective-intro h2{font-size:clamp(38px,4vw,57px)}.evidence-stamp{border:1px solid var(--rust);color:var(--rust);display:inline-block;padding:12px 15px;font:9px/1.6 var(--mono);letter-spacing:1px;text-align:center;margin-top:25px;transform:rotate(-5deg)}.detective-panel blockquote{font:italic 19px/1.6 var(--serif);margin:21px 0;padding:0 0 0 18px;border-left:2px solid var(--rust)}.button-row{display:flex;align-items:center;gap:22px}.outline-btn{border:1px solid var(--rust);background:transparent;color:var(--rust);padding:11px 14px;font:600 10px var(--sans);cursor:pointer}.quiet-btn{padding:10px 0}
+.deep-slide{background:#29332c;color:#f0ecdf}.deep-slide .section-kicker,.deep-slide .body-copy{color:#c0c4b8}.deep-header{display:flex;justify-content:space-between;align-items:end;gap:40px}.deep-header h2{font-size:clamp(38px,4.5vw,62px)}.deep-header .body-copy{max-width:320px}.lens-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.lens-card{border:1px solid #667064;padding:19px 21px;min-height:260px;position:relative}.lens-index{color:#c5a36c;font-size:8px}.lens-symbol{font:38px var(--serif);color:#c17b5b;margin:17px 0 4px}.lens-card h3{font-size:24px}.lens-card p{color:#c0c4b8;max-width:260px}.lens-example{border-top:1px solid #667064;margin-top:17px;padding-top:12px;font:11px/1.6 var(--sans);color:#e1ddcf}.lens-example b{display:block;color:#c5a36c;font-size:8px;margin-bottom:4px}
+.stand-slide{background:#d8d0bd}.stand-heading h2{font-size:clamp(34px,4.1vw,57px);max-width:900px}.stand-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0 17px}.stand-option{background:#eee9dd;border:1px solid #c8c0af;padding:18px;text-align:left;min-height:145px;cursor:pointer;position:relative;color:var(--ink)}.stand-option>span{font:10px var(--mono);color:var(--rust)}.stand-option strong{display:block;font:600 21px var(--serif);margin:18px 0 6px}.stand-option small{font-size:10px;color:#67695f;line-height:1.5;display:block;max-width:190px}.stand-option>b{position:absolute;right:18px;top:17px;color:var(--rust)}.stand-option.selected{background:var(--ink);color:var(--paper);border-color:var(--ink)}.stand-option.selected small{color:#c5c6ba}.stand-response{background:#eee9dd;padding:16px 20px;border-left:3px solid var(--rust)}.response-label{color:var(--rust);font-size:8px}.stand-response p{font:14px/1.6 var(--serif);margin:8px 0}.response-prompts{display:flex;gap:20px;color:var(--muted);font-size:8px}
+.application-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start;flex:1}.application-grid h2{font-size:clamp(38px,4vw,57px)}.timer-box{border-top:1px solid var(--line);margin-top:28px;padding-top:16px;max-width:270px}.timer-label{color:var(--muted);font-size:8px}.timer-box strong{font:600 42px var(--mono);display:block;margin:8px 0}.timer-controls{display:flex;gap:8px}.timer-controls button{border:1px solid var(--line);background:transparent;padding:8px 13px;font:10px var(--sans);cursor:pointer}.writing-card{padding:23px}.scenario{font:italic 17px/1.6 var(--serif);margin:18px 0}.task-steps{display:grid;gap:10px;margin:17px 0 20px}.task-steps div{display:flex;gap:13px;font-size:11px;line-height:1.6}.writing-card label{display:block;color:var(--rust);font-size:8px;margin-bottom:8px}.writing-card textarea{width:100%;min-height:76px;resize:vertical;background:#f4f0e6;border:1px solid #d0c8b8;padding:12px;font:12px/1.6 var(--sans);color:var(--ink)}.writing-actions{display:flex;align-items:center;gap:13px}.writing-actions span{font:8px var(--mono);color:var(--muted)}.thought-preview{background:#dce3d6;border-left:2px solid var(--sage);padding:12px;margin-top:12px;font:13px/1.6 var(--serif);white-space:pre-wrap}
+.final-slide{background:#29332c;color:var(--paper)}.final-slide .section-kicker{color:#c0c4b8}.final-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:6vw;align-items:center;flex:1}.final-intro h2{font-size:clamp(38px,4.2vw,60px)}.final-intro .body-copy{color:#c0c4b8}.final-index{border-top:1px solid #667064;margin-top:35px;padding-top:14px;color:#c5a36c}.final-index b{float:right;color:#f0ecdf}.final-question{background:#e7e1d3;color:var(--ink)}.final-question .choice{background:#f0ecdf}.synthesis-slide{background:#202923;color:var(--paper);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7vw;padding-left:8vw}.synthesis-art{height:75%;position:relative;display:grid;place-items:center}.synth-circle{width:min(30vw,350px);aspect-ratio:1;border:1px solid #a96a4f;border-radius:50%;position:relative}.synth-circle:before,.synth-circle:after{content:"";position:absolute;border:1px solid #788574;border-radius:50%;inset:13%;transform:rotate(35deg) scaleX(.55)}.synth-circle:after{transform:rotate(-35deg) scaleX(.55)}.synth-circle{background:repeating-linear-gradient(45deg,transparent 0 18px,#a96a4f19 19px 20px)}.synth-vertical{position:absolute;writing-mode:vertical-rl;font:9px var(--mono);letter-spacing:3px;color:#c5a36c}.synthesis-copy h2{font-size:clamp(42px,5vw,70px)}.synthesis-statement{font:17px/1.7 var(--serif);color:#c9c9bc;max-width:430px;margin:24px 0}.takeaways{display:grid;gap:9px;border-top:1px solid #667064;padding-top:17px;margin:25px 0;font:9px var(--mono);letter-spacing:1px;color:#c5a36c}
+.controlbar{height:64px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4.2vw;background:rgba(240,236,223,.97);z-index:3}.control-left{display:flex;align-items:center;gap:18px}.nav-btn{border:0;background:transparent;color:var(--ink);font:10px var(--mono);letter-spacing:.7px;cursor:pointer;padding:10px 0}.nav-btn:disabled{opacity:.3;cursor:not-allowed}.control-separator{height:18px;width:1px;background:var(--line)}.progress-wrap{display:flex;align-items:center;gap:14px;width:30%;max-width:320px}.progress-track{height:2px;background:#d5cebd;flex:1}.progress-track div{height:100%;width:10%;background:var(--rust);transition:width .3s}.progress-wrap span{font:8px var(--mono);color:var(--muted);white-space:nowrap}.control-mode{border:1px solid var(--line);background:transparent;padding:9px 12px;font:8px var(--mono);letter-spacing:.8px;color:var(--muted);cursor:pointer}.control-mode .mode-dot{background:var(--sage);margin-right:7px}
+.outline-overlay{position:fixed;inset:0;background:#18201dcc;z-index:30;display:flex;justify-content:flex-end}.outline-panel{width:min(410px,100%);height:100%;background:var(--paper);padding:30px;overflow:auto;box-shadow:-20px 0 60px #0002}.outline-head{display:flex;justify-content:space-between;align-items:center}.outline-head button{border:0;background:none;font-size:25px;cursor:pointer}.outline-panel>p{color:var(--muted);font-size:8px}.outline-item{display:flex;gap:15px;width:100%;text-align:left;padding:15px 5px;border:0;border-bottom:1px solid var(--line);background:none;cursor:pointer;color:var(--ink)}.outline-item span{font:10px var(--mono);color:var(--rust)}.outline-item strong{font:600 14px var(--serif)}.toast{position:fixed;bottom:84px;left:50%;transform:translate(-50%,10px);background:var(--ink);color:var(--paper);padding:10px 16px;font:10px var(--mono);opacity:0;pointer-events:none;transition:.2s;z-index:40}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.topbar{padding:0 20px}.rail{width:55px}.slide{padding:34px 5vw 70px}.slide-foot{left:5vw;right:5vw}.hero-art{right:0;opacity:.55}.hero-copy{width:75%}.reading-grid{grid-template-columns:35px 1fr}.reading-aside{grid-column:2;margin-top:5px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.reading-aside ul{margin:0}.aside-question{margin:0}.detective-layout,.application-grid,.final-layout{gap:25px}.controlbar{padding:0 20px}.progress-wrap{width:24%}}
+@media(max-width:650px){body{overflow:auto}.topbar{height:64px}.brand-mark{width:34px;height:34px}.brand-copy strong{font-size:8px}.brand-copy small{font-size:8px}.top-meta{display:none}.menu-btn{font-size:8px;padding:0 8px}.stage{height:calc(100dvh - 64px);min-height:620px}.rail{width:42px;padding-top:20px}.rail-step{font-size:8px;width:27px}.rail-track i{height:18px}.rail-label,.rail-bottom{font-size:7px}.slide{padding:27px 21px 74px}.slide-foot{left:21px;right:21px;font-size:7px;gap:10px}.hero-slide{padding-top:65px}.hero-copy{width:100%}.hero-copy h1{font-size:45px}.hero-art{width:65%;height:48%;top:48%;right:-5%;opacity:.32}.hero-deck{font-size:13px;max-width:300px}.hero-bottom{align-items:flex-start;flex-direction:column;gap:14px}.section-kicker{font-size:7px;margin-bottom:22px}.split-layout,.detective-layout,.application-grid,.final-layout{grid-template-columns:1fr;gap:20px}.split-layout>div:first-child .body-copy{max-width:340px}.slide h2{font-size:39px}.activity-card,.detective-panel,.final-question,.writing-card{padding:17px}.prompt{font-size:15px}.clue-list{margin-top:20px}.clue-list div{padding:9px 0}.topic-heading,.deep-header{display:block}.topic-heading h2,.deep-header h2{font-size:38px}.definition-band{padding:16px;gap:10px}.definition-band p{font-size:13px}.big-quote{font-size:48px}.definition-tag{display:none}.three-columns{gap:13px}.three-columns h3{font-size:17px}.three-columns p{font-size:9px}.reading-grid{grid-template-columns:22px 1fr;gap:13px}.reading-content h2{font-size:42px}.prose{font-size:13px}.reading-aside{grid-column:2;display:block;margin-top:0}.reading-aside ul{margin:8px 0}.aside-question{margin-top:12px}.reading-tools{flex-wrap:wrap;gap:9px;font-size:7px}.detective-intro h2{font-size:36px}.evidence-stamp{display:none}.deep-header .body-copy{margin-top:8px}.lens-grid{grid-template-columns:1fr;gap:8px;margin-top:18px}.lens-card{min-height:0;padding:13px 16px}.lens-symbol{float:right;margin:0}.lens-card h3{font-size:19px;margin:8px 0}.lens-card p{max-width:none}.lens-example{margin-top:10px}.stand-heading h2{font-size:34px}.stand-options{grid-template-columns:1fr;gap:7px;margin:15px 0}.stand-option{min-height:90px;padding:12px}.stand-option strong{font-size:18px;margin:8px 0 3px}.stand-option small{max-width:85%}.stand-response{padding:12px}.response-prompts{flex-direction:column;gap:5px}.timer-box{margin-top:15px}.timer-box strong{font-size:34px}.writing-card{margin-bottom:10px}.application-grid h2{font-size:37px}.final-intro h2{font-size:37px}.final-index{margin-top:14px}.synthesis-slide{grid-template-columns:1fr;gap:8px;padding:25px 22px 75px}.synthesis-art{height:130px}.synth-circle{width:125px}.synth-vertical{font-size:7px}.synthesis-copy h2{font-size:44px}.synthesis-statement{font-size:14px;margin:12px 0}.takeaways{margin:14px 0}.controlbar{height:60px;padding:0 12px}.nav-btn{font-size:8px}.nav-btn span{display:none}.control-left{gap:10px}.progress-wrap{width:35%;gap:7px}.progress-wrap span{font-size:7px}.control-mode{font-size:7px;padding:8px}.toast{bottom:70px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Interaktibong Filipino home">
+      <span class="brand-mark">IF<span>•</span></span>
+      <span class="brand-copy"><strong>INTERAKTIBONG FILIPINO</strong><small>Silid-aralan ng mga ideya</small></span>
+    </a>
+    <div class="top-meta"><span class="live-dot"></span><span id="sectionLabel">PRESENTATION STUDIO</span><span class="meta-divider"></span><span id="slideCounter">01 / 10</span></div>
+    <div class="top-actions">
+      <button class="icon-btn" id="fullscreenBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button>
+      <button class="menu-btn" id="outlineBtn">MGA EKSENA <span>☰</span></button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <aside class="rail">
+      <div class="rail-label">DALoy</div>
+      <div class="rail-track" id="railTrack">
+        <button class="rail-step active" data-go="0" title="Pambungad">01</button>
+        <i></i><button class="rail-step" data-go="1" title="Larong panimula">02</button>
+        <i></i><button class="rail-step" data-go="2" title="Pagbubukas ng paksa">03</button>
+        <i></i><button class="rail-step" data-go="3" title="Pagbasa">04</button>
+        <i></i><button class="rail-step" data-go="4" title="Pagsusuri">05</button>
+        <i></i><button class="rail-step" data-go="5" title="Talakayan">06</button>
+        <i></i><button class="rail-step" data-go="6" title="Pananaw">07</button>
+        <i></i><button class="rail-step" data-go="7" title="Paglalapat">08</button>
+        <i></i><button class="rail-step" data-go="8" title="Pangwakas na hamon">09</button>
+        <i></i><button class="rail-step" data-go="9" title="Sintesis">10</button>
+      </div>
+      <div class="rail-bottom">JHS<br>+ SHS</div>
+    </aside>
+
+    <section class="presentation" aria-live="polite">
+      <div class="slides" id="slides">
+        <article class="slide hero-slide active" data-kind="opening">
+          <div class="hero-copy">
+            <p class="eyebrow"><span>01</span> / ISANG BUKAS NA SILID-ARALAN</p>
+            <h1>Hindi lang binabasa ang kuwento.<br><em>Binubuksan</em> ito.</h1>
+            <p class="hero-deck">Isang paglalakbay sa panitikan, pagbasa, at mga kahulugang nakatago sa karaniwang buhay.</p>
+            <div class="hero-bottom">
+              <button class="primary-btn" data-next>Simulan ang paglalakbay <span>↗</span></button>
+              <span class="micro-note">ISANG INTERAKTIBONG TALAKAYAN<br>PARA SA JHS AT SHS</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Abstraktong komposisyon ng pahina, habi, at tinta">
+            <div class="sun-disc"></div><div class="paper-sheet"><span class="paper-no">SALAYSAY / 001</span><div class="paper-lines"></div><div class="paper-stamp">BASA<br>·<br>SURI</div></div>
+            <div class="woven woven-a"></div><div class="woven woven-b"></div>
+            <span class="art-caption">MGA KUWENTONG<br>HINDI NATATAPOS SA PAHINA</span>
+          </div>
+          <div class="slide-foot"><span>INTERAKTIBONG FILIPINO</span><span>01 — 10</span></div>
+        </article>
+
+        <article class="slide game-slide" data-kind="game">
+          <div class="section-kicker"><span class="kicker-no">A</span><span>LARO NG PAGMAMASID</span><span class="kicker-line"></span><span class="kicker-time">3 MIN</span></div>
+          <div class="split-layout">
+            <div>
+              <p class="eyebrow">BAGO NATIN PANGALANAN</p>
+              <h2>May kuwento sa<br><em>likod ng bagay.</em></h2>
+              <p class="body-copy">Tingnan ang mga pahiwatig. Huwag munang hulaan ang aralin—unawain muna kung anong mga ideya ang pinagdurugtong ng mga ito.</p>
+              <div class="clue-list">
+                <div><b>01</b><span>Isang lumang payong na may tagpi.</span></div>
+                <div><b>02</b><span>Isang liham na hindi naipadala.</span></div>
+                <div><b>03</b><span>Isang upuang laging bakante tuwing hapunan.</span></div>
+              </div>
+            </div>
+            <div class="activity-card">
+              <div class="card-topline"><span>HULAAN ANG UGNAYAN</span><span>01 / 01</span></div>
+              <p class="prompt">Ano ang pinakamalakas na nag-uugnay sa tatlong bagay?</p>
+              <div class="choice-stack" id="clueChoices">
+                <button class="choice" data-correct="false">A. Mga bagay na walang silbi</button>
+                <button class="choice" data-correct="true">B. Mga bagay na maaaring magdala ng alaala at kahulugan</button>
+                <button class="choice" data-correct="false">C. Mga palamuti sa isang tahanan</button>
+              </div>
+              <div class="feedback" id="clueFeedback" hidden></div>
+              <button class="text-btn" id="clueReveal">Ipakita ang paliwanag <span>↗</span></button>
+            </div>
+          </div>
+          <div class="slide-foot"><span>PAHINTULOT SA PAG-IISIP: WALANG MADALIANG SAGOT</span><span>02 — 10</span></div>
+        </article>
+
+        <article class="slide topic-slide" data-kind="topic">
+          <div class="section-kicker"><span class="kicker-no">B</span><span>PAGBUBUKAS NG PAKSA</span><span class="kicker-line"></span><span class="kicker-time">TALAKAYAN</span></div>
+          <div class="topic-heading"><p class="eyebrow">PANITIKAN / PAGBASA / PAGPAPAKAHULUGAN</p><h2>Ang panitikan ay hindi lamang <em>salaysay.</em></h2></div>
+          <div class="definition-band"><span class="big-quote">“</span><p>Isa itong malikhaing pag-unawa sa tao at lipunan—isang paraan ng pag-iingat, pagtatanong, at pagbibigay-kahulugan sa karanasan.</p><span class="definition-tag">PANGUNAHING IDEYA</span></div>
+          <div class="three-columns">
+            <div><span class="column-no">01</span><h3>Salamin</h3><p>Ipinakikita ang mga karanasan, tunggalian, at kalagayan ng tao.</p></div>
+            <div><span class="column-no">02</span><h3>Tinig</h3><p>Binibigyang-boses ang mga pananaw at karanasang maaaring hindi napapakinggan.</p></div>
+            <div><span class="column-no">03</span><h3>Tanong</h3><p>Hinahamon ang nakasanayan at hinihikayat ang mambabasa na magsuri.</p></div>
+          </div>
+          <div class="slide-foot"><span>HINDI LANG “ANO ANG NANGYARI?” KUNDI “BAKIT ITO MAHALAGA?”</span><span>03 — 10</span></div>
+        </article>
+
+        <article class="slide reading-slide" data-kind="reading">
+          <div class="section-kicker"><span class="kicker-no">C</span><span>TEKSTONG SUSURIIN</span><span class="kicker-line"></span><span class="kicker-time">BASAHIN NANG MABUTI</span></div>
+          <div class="reading-grid">
+            <div class="reading-margin"><span class="vertical-word">SALAYSAY</span><span class="margin-number">01</span><span class="margin-note">ORIHINAL NA HALIMBAWA</span></div>
+            <div class="reading-content">
+              <p class="eyebrow">MAIKLING PROSA / HINDI TULUYANG NAKASARA ANG PINTO</p>
+              <h2>Ang Silyang<br><em>Nasa Bintana</em></h2>
+              <div class="prose">
+                <p>Tuwing dapithapon, inilalapit ni Aling Sela ang lumang silya sa bintana. Doon niya hinihintay ang tunog ng traysikel na dati'y sinasakyan ng anak niyang nagtatrabaho sa malayong bayan.</p>
+                <p>Isang araw, may dumating na sobre. Walang mahabang paliwanag—larawan lamang ng isang maliit na silid, isang mesa, at dalawang tasang magkatabi. Inilapag niya iyon sa tabi ng orasan.</p>
+                <p>Kinabukasan, hindi na niya inilapit ang silya sa bintana. Sa halip, binuksan niya ang pinto.</p>
+              </div>
+              <div class="reading-tools"><span>03 TALATA</span><span>~100 SALITA</span><span>ORIHINAL NA TEKSTO PARA SA GAWAIN</span></div>
+            </div>
+            <aside class="reading-aside"><span class="aside-label">HABANG NAGBABASA</span><p>Markahan sa isip ang:</p><ul><li>paulit-ulit na bagay</li><li>pagbabago sa kilos</li><li>impormasyong hindi direktang sinabi</li></ul><div class="aside-question">Ano ang hindi sinasabi ng teksto, ngunit ipinahihiwatig nito?</div></aside>
+          </div>
+          <div class="slide-foot"><span>MASINSING PAGBASA: PANSININ ANG DETALYE</span><span>04 — 10</span></div>
+        </article>
+
+        <article class="slide game-slide" data-kind="game">
+          <div class="section-kicker"><span class="kicker-no">D</span><span>LITERARY DETECTIVE</span><span class="kicker-line"></span><span class="kicker-time">PAGSUSURI</span></div>
+          <div class="detective-layout">
+            <div class="detective-intro"><p class="eyebrow">BASAHIN ANG PAGITAN NG MGA LINYA</p><h2>Hindi lahat ng<br>mahalaga ay<br><em>tahasang sinasabi.</em></h2><p class="body-copy">Sa panitikan, maaaring magdala ng mas malalim na kahulugan ang isang bagay, kilos, o katahimikan.</p><div class="evidence-stamp">EBIDENSIYA<br>+<br>PAGPAPAKAHULUGAN</div></div>
+            <div class="detective-panel">
+              <div class="card-topline"><span>EBIDENSIYA MULA SA TEKSTO</span><span>CASE 001</span></div>
+              <blockquote>“Kinabukasan, hindi na niya inilapit ang silya sa bintana. Sa halip, binuksan niya ang pinto.”</blockquote>
+              <p class="prompt">Aling interpretasyon ang may pinakamalinaw na batayan sa teksto?</p>
+              <div class="choice-stack" id="symbolChoices">
+                <button class="choice" data-correct="false">A. Ayaw na ni Aling Sela sa lumang silya.</button>
+                <button class="choice" data-correct="true">B. Maaaring nagpapakita ito ng pagtanggap at kahandaang magsimula ng bagong yugto.</button>
+                <button class="choice" data-correct="false">C. Nasira ang bintana kaya binuksan niya ang pinto.</button>
+              </div>
+              <div class="feedback" id="symbolFeedback" hidden></div>
+              <div class="button-row"><button class="outline-btn" id="symbolExplain">Suriin ang ebidensiya</button><button class="quiet-btn" id="symbolReset">Ulitin ↺</button></div>
+            </div>
+          </div>
+          <div class="slide-foot"><span>ANG INTERPRETASYON AY DAPAT MAY BATAYAN</span><span>05 — 10</span></div>
+        </article>
+
+        <article class="slide topic-slide deep-slide" data-kind="topic">
+          <div class="section-kicker"><span class="kicker-no">E</span><span>MAS MALALIM NA PAGTALAKAY</span><span class="kicker-line"></span><span class="kicker-time">KONSEPTO</span></div>
+          <div class="deep-header"><div><p class="eyebrow">MGA KASANGKAPAN SA PAGSUSURI</p><h2>Tatlong lente.<br><em>Maraming pagbasa.</em></h2></div><p class="body-copy">Hindi iisa ang posibleng pagbasa sa isang akda. Nagiging matibay ang pagsusuri kapag malinaw ang lente at may tekstuwal na patunay.</p></div>
+          <div class="lens-grid">
+            <div class="lens-card"><span class="lens-index">LENTE 01</span><div class="lens-symbol">◉</div><h3>Simbolismo</h3><p>Bagay o imaheng kumakatawan sa ideyang higit sa literal na kahulugan nito.</p><div class="lens-example"><b>HALIMBAWA</b> Ang bukas na pinto bilang posibilidad o pagtanggap.</div></div>
+            <div class="lens-card"><span class="lens-index">LENTE 02</span><div class="lens-symbol">⌁</div><h3>Motibo</h3><p>Paulit-ulit na elemento na tumutulong bumuo ng kahulugan o damdamin.</p><div class="lens-example"><b>HALIMBAWA</b> Ang silya at bintana bilang paulit-ulit na larawan ng paghihintay.</div></div>
+            <div class="lens-card"><span class="lens-index">LENTE 03</span><div class="lens-symbol">✳</div><h3>Tema</h3><p>Pangunahing kaisipan o mas malawak na pahayag na sinusuri ng akda.</p><div class="lens-example"><b>HALIMBAWA</b> Ang pagharap sa pagbabago ay maaaring magsimula sa pagtanggap.</div></div>
+          </div>
+          <div class="slide-foot"><span>IPALIWANAG ANG “BAKIT,” HINDI LANG ANG “ANO”</span><span>06 — 10</span></div>
+        </article>
+
+        <article class="slide stand-slide" data-kind="discussion">
+          <div class="section-kicker"><span class="kicker-no">F</span><span>PUMILI NG PANANAW</span><span class="kicker-line"></span><span class="kicker-time">FOUR CORNERS</span></div>
+          <div class="stand-heading"><p class="eyebrow">WALANG IISA AT AGAD NA TAMANG PANIG</p><h2>Ang panitikan ba ay dapat laging<br><em>sumalamin sa realidad?</em></h2></div>
+          <div class="stand-options" id="standOptions">
+            <button class="stand-option" data-stand="Sang-ayon"><span>01</span><strong>Sang-ayon</strong><small>Dapat nitong ilantad ang tunay na kalagayan.</small><b>↗</b></button>
+            <button class="stand-option" data-stand="Hindi sang-ayon"><span>02</span><strong>Hindi sang-ayon</strong><small>May puwang din ang imahinasyon at pagtakas.</small><b>↗</b></button>
+            <button class="stand-option" data-stand="Depende"><span>03</span><strong>Depende</strong><small>Nakasalalay ito sa layunin at konteksto ng akda.</small><b>↗</b></button>
+          </div>
+          <div class="stand-response" id="standResponse" aria-live="polite"><span class="response-label">GABAY SA TALAKAYAN</span><p>Pumili ng paninindigan. Bumuo ng isang dahilan at magbigay ng halimbawa mula sa tekstong nabasa o sa sariling karanasan.</p><div class="response-prompts"><span>ANO ANG BATAYAN?</span><span>ANO ANG POSIBLENG KONTRA-ARGUMENTO?</span></div></div>
+          <div class="slide-foot"><span>MAHALAGA ANG PANGANGATWIRAN, HINDI ANG PAGKAKAMPI-KAMPI</span><span>07 — 10</span></div>
+        </article>
+
+        <article class="slide application-slide" data-kind="application">
+          <div class="section-kicker"><span class="kicker-no">G</span><span>ILAPAT SA BAGONG SITWASYON</span><span class="kicker-line"></span><span class="kicker-time">PARES / PANGKAT</span></div>
+          <div class="application-grid">
+            <div><p class="eyebrow">HAMON SA PAGBASA</p><h2>Ikaw naman<br>ang <em>magsusulat ng kahulugan.</em></h2><p class="body-copy">Sa loob ng dalawang minuto, bumuo ng interpretasyon. Hindi kailangang pareho sa iba—kailangang may malinaw na batayan.</p><div class="timer-box"><span class="timer-label">ORAS NG PAG-IISIP</span><strong id="timerDisplay">02:00</strong><div class="timer-controls"><button id="timerStart">Simulan</button><button id="timerReset">I-reset</button></div></div></div>
+            <div class="writing-card"><div class="card-topline"><span>SITWASYON</span><span>GROUP TASK 02</span></div><p class="scenario">May isang mag-aaral na palaging nag-iiwan ng bakanteng upuan sa tabi niya tuwing pangkatang gawain. Isang araw, may bagong kaklaseng walang makasama.</p><div class="task-steps"><div><b>01</b><span>Anong posibleng kahulugan ang taglay ng bakanteng upuan?</span></div><div><b>02</b><span>Anong detalye ang kailangan mong malaman bago magpasya?</span></div><div><b>03</b><span>Paano magbabago ang interpretasyon kung inanyayahan niya ang bagong kaklase?</span></div></div><label for="groupThought">ISULAT ANG INYONG PANGUNAHING IDEYA</label><textarea id="groupThought" placeholder="Batay sa sitwasyon, maaaring ipakahulugan na..."></textarea><div class="writing-actions"><button class="outline-btn" id="saveThought">Ipakita sa klase</button><span id="saveStatus">Hindi awtomatikong ipinapadala ang sagot.</span></div><div id="thoughtPreview" class="thought-preview" hidden></div></div>
+          </div>
+          <div class="slide-foot"><span>MAGBASA • MAGTANONG • MAGBIGAY-BATAYAN</span><span>08 — 10</span></div>
+        </article>
+
+        <article class="slide final-slide" data-kind="assessment">
+          <div class="section-kicker"><span class="kicker-no">H</span><span>PANGWAKAS NA HAMON</span><span class="kicker-line"></span><span class="kicker-time">SINTESIS SA GAWA</span></div>
+          <div class="final-layout">
+            <div class="final-intro"><p class="eyebrow">BAGO ISARA ANG PAHINA</p><h2>Basahin ang sitwasyon.<br><em>Ipagtanggol ang basa.</em></h2><p class="body-copy">Piliin ang interpretasyong pinakamalakas ang batayan. Pagkatapos, suriin ang paliwanag.</p><div class="final-index">HULING PAGSUSURI <b>03 / 03</b></div></div>
+            <div class="final-question">
+              <div class="card-topline"><span>HULING TANONG</span><span>APPLICATION</span></div>
+              <p class="prompt">Sa isang kuwento, paulit-ulit na inilalarawan ang ilaw sa bintana tuwing may umuuwi. Sa huling bahagi, namatay ang ilaw ngunit nanatiling bukas ang pinto. Aling pagbasa ang pinakamatibay?</p>
+              <div class="choice-stack" id="finalChoices">
+                <button class="choice" data-correct="false">A. Tiyak na nawalan ng kuryente ang bahay.</button>
+                <button class="choice" data-correct="true">B. Maaaring nagbago ang paraan ng paghihintay; nananatili ang pagtanggap kahit wala na ang dating palatandaan.</button>
+                <button class="choice" data-correct="false">C. Walang kaugnayan ang ilaw at pinto sa kuwento.</button>
+              </div>
+              <div class="feedback" id="finalFeedback" hidden></div>
+              <button class="text-btn" id="finalExplain">Tingnan ang paliwanag <span>↗</span></button>
+            </div>
+          </div>
+          <div class="slide-foot"><span>ANG MAHUSAY NA PAGBASA AY MAY PAG-IISIP AT EBIDENSIYA</span><span>09 — 10</span></div>
+        </article>
+
+        <article class="slide synthesis-slide" data-kind="synthesis">
+          <div class="synthesis-art"><div class="synth-circle"></div><span class="synth-vertical">PAGBASA BILANG PAGLIKHA NG KAHULUGAN</span></div>
+          <div class="synthesis-copy"><p class="eyebrow">SINTESIS / PAG-UWI NG KAISIPAN</p><h2>Hindi nagtatapos<br>sa <em>pahina</em> ang<br>pag-unawa.</h2><p class="synthesis-statement">Ang mambabasa ay hindi tagatanggap lamang. Siya ay tagamasid, tagapagtanong, at katuwang sa pagbuo ng kahulugan.</p><div class="takeaways"><span>01 / PANSININ ANG DETALYE</span><span>02 / MAGBIGAY NG BATAYAN</span><span>03 / BUKSAN ANG IBA'T IBANG PAGBASA</span></div><button class="primary-btn" id="restartBtn">Muling simulan <span>↺</span></button></div>
+          <div class="slide-foot"><span>INTERAKTIBONG FILIPINO</span><span>10 — 10</span></div>
+        </article>
+      </div>
+      <div class="controlbar">
+        <div class="control-left"><button class="nav-btn" id="prevBtn" disabled>← <span>NAKARAAN</span></button><span class="control-separator"></span><button class="nav-btn" id="nextBtn"><span>SUNOD</span> →</button></div>
+        <div class="progress-wrap"><div class="progress-track"><div id="progressFill"></div></div><span id="progressText">10% KUMPLETO</span></div>
+        <button class="control-mode" id="modeBtn"><span class="mode-dot"></span> PRESENTER MODE</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="outline-overlay" id="outlineOverlay" hidden>
+    <div class="outline-panel"><div class="outline-head"><span>MAPA NG PRESENTASYON</span><button id="closeOutline" aria-label="Isara">×</button></div><p>Pumili ng eksena upang lumipat.</p><div id="outlineList"></div></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const railSteps = [...document.querySelectorAll('.rail-step')];
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  const slideCounter = document.getElementById('slideCounter');
+  const sectionLabel = document.getElementById('sectionLabel');
+  const toast = document.getElementById('toast');
+  let current = 0;
+  let presenterMode = true;
+  let timerInterval = null;
+  let remaining = 120;
+
+  const names = ['Pambungad','Larong panimula','Pagbubukas ng paksa','Tekstong susuriin','Literary detective','Mas malalim na talakayan','Pumili ng pananaw','Ilapat sa sitwasyon','Pangwakas na hamon','Sintesis'];
+  const labels = ['PRESENTATION STUDIO','LARO NG PAGMAMASID','PANITIKAN AT PAGBASA','MASINSING PAGBASA','PAGSUSURI NG AKDA','MGA KASANGKAPAN','PANGANGATWIRAN','PAGLALAPAT','PAGTATAYA','PAG-UWI NG KAISIPAN'];
+  function showToast(message) {
+    toast.textContent = message; toast.classList.add('show');
+    clearTimeout(showToast.timeout); showToast.timeout = setTimeout(() => toast.classList.remove('show'), 1900);
+  }
+  function goTo(index) {
+    const next = Math.max(0, Math.min(slides.length - 1, index));
+    slides[current].classList.remove('active');
+    current = next; slides[current].classList.add('active');
+    slides[current].scrollTop = 0;
+    railSteps.forEach((step, i) => {
+      step.classList.toggle('active', i === current);
+      step.classList.toggle('visited', i < current);
+    });
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
+    progressFill.style.width = `${((current + 1) / slides.length) * 100}%`;
+    progressText.textContent = `${Math.round(((current + 1) / slides.length) * 100)}% KUMPLETO`;
+    slideCounter.textContent = `${String(current + 1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+    sectionLabel.textContent = labels[current];
+    document.title = `${names[current]} — Interaktibong Filipino`;
+  }
+  function next() { goTo(current + 1); }
+  function previous() { goTo(current - 1); }
+  prevBtn.addEventListener('click', previous);
+  nextBtn.addEventListener('click', next);
+  document.querySelectorAll('[data-next]').forEach(btn => btn.addEventListener('click', next));
+  railSteps.forEach(btn => btn.addEventListener('click', () => goTo(Number(btn.dataset.go))));
+  document.getElementById('restartBtn').addEventListener('click', () => { resetActivities(); goTo(0); showToast('Nagsimula muli ang presentasyon.'); });
+
+  // Outline drawer
+  const overlay = document.getElementById('outlineOverlay');
+  const outlineList = document.getElementById('outlineList');
+  names.forEach((name, i) => {
+    const item = document.createElement('button'); item.className = 'outline-item';
+    item.innerHTML = `<span>${String(i+1).padStart(2,'0')}</span><strong>${name}</strong>`;
+    item.addEventListener('click', () => { goTo(i); overlay.hidden = true; });
+    outlineList.appendChild(item);
+  });
+  document.getElementById('outlineBtn').addEventListener('click', () => overlay.hidden = false);
+  document.getElementById('closeOutline').addEventListener('click', () => overlay.hidden = true);
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.hidden = true; });
+
+  // Fullscreen and keyboard
+  async function toggleFullscreen() {
+    try {
+      if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+      else await document.exitFullscreen();
+    } catch { showToast('Hindi suportado ang fullscreen sa browser na ito.'); }
+  }
+  document.getElementById('fullscreenBtn').addEventListener('click', toggleFullscreen);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !overlay.hidden) { overlay.hidden = true; return; }
+    if (e.target.matches('textarea,input,button')) {
+      if (e.key === 'Escape') e.target.blur();
+      return;
+    }
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') previous();
+    if (e.key.toLowerCase() === 'f') toggleFullscreen();
+  });
+  document.getElementById('modeBtn').addEventListener('click', e => {
+    presenterMode = !presenterMode;
+    e.currentTarget.innerHTML = `<span class="mode-dot"></span> ${presenterMode ? 'PRESENTER MODE' : 'DISCUSSION MODE'}`;
+    showToast(presenterMode ? 'Presenter mode: kontrolado ang pag-usad.' : 'Discussion mode: bukas ang talakayan.');
+  });
+
+  // Reusable answer interaction
+  function setupChoices(containerId, feedbackId, explanation, revealId) {
+    const container = document.getElementById(containerId);
+    const feedback = document.getElementById(feedbackId);
+    let selected = null;
+    const buttons = [...container.querySelectorAll('.choice')];
+    function reveal() {
+      feedback.hidden = false;
+      if (!selected) {
+        feedback.textContent = explanation;
+      } else {
+        const correct = selected.dataset.correct === 'true';
+        feedback.textContent = correct
+          ? `Tumpak. ${explanation}`
+          : `Balikan ang mga pahiwatig. ${explanation}`;
+      }
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      selected = btn; buttons.forEach(b => b.classList.remove('selected','correct','incorrect'));
+      btn.classList.add('selected');
+      if (btn.dataset.correct === 'true') btn.classList.add('correct');
+      else btn.classList.add('incorrect');
+      feedback.hidden = false;
+      feedback.textContent = btn.dataset.correct === 'true'
+        ? 'May batayan ang iyong sagot. Piliin ang “ipakita ang paliwanag” upang palalimin ang pagsusuri.'
+        : 'Subukang balikan ang mga detalye. Hindi sapat ang literal na pagtingin lamang sa mga bagay.';
+    }));
+    if (revealId) document.getElementById(revealId).addEventListener('click', reveal);
+    return () => { selected = null; buttons.forEach(b => b.classList.remove('selected','correct','incorrect')); feedback.hidden = true; };
+  }
+  const resetClue = setupChoices('clueChoices','clueFeedback','Ang payong, liham, at bakanteng upuan ay maaaring maging sisidlan ng alaala. Sa panitikan, nagkakaroon ng kahulugan ang mga bagay batay sa konteksto at karanasan ng tauhan.','clueReveal');
+  const resetSymbol = setupChoices('symbolChoices','symbolFeedback','Ang pagbabago mula sa paghihintay sa bintana tungo sa pagbubukas ng pinto ay maaaring magpahiwatig ng pagtanggap o pagkilos. Interpretasyon ito, hindi tiyak na katotohanan—kaya mahalaga ang salitang “maaaring” at ang pagbanggit sa tekstuwal na ebidensiya.','symbolExplain');
+  const resetFinal = setupChoices('finalChoices','finalFeedback','Ang paulit-ulit na ilaw ay maaaring maging motibo ng paghihintay; ang bukas na pinto sa wakas ay maaaring sumagisag sa pagtanggap. Pinakamalakas ang pagbasa kapag pinag-uugnay ang mga detalye sa kabuuan ng kuwento.','finalExplain');
+  document.getElementById('symbolReset').addEventListener('click', () => { resetSymbol(); showToast('Na-reset ang pagsusuri.'); });
+
+  // Four corners / choose your stand
+  const standMessages = {
+    'Sang-ayon':'Maaaring ipakita ng panitikan ang mga suliraning panlipunan at karanasan ng mga tao. Tanong na dapat sagutin: paano nito maipakikita ang realidad nang hindi nagiging simpleng ulat lamang?',
+    'Hindi sang-ayon':'May puwang ang pantasya, alegorya, at imahinasyon. Maaari ring magbukas ang mga ito ng bagong paraan upang unawain ang realidad. Tanong: kailan nagiging makabuluhan ang paglayo sa makatotohanang paglalarawan?',
+    'Depende':'Mahalaga ang layunin, anyo, mambabasa, at konteksto ng akda. Tanong: anong pamantayan ang gagamitin upang malaman kung epektibo ang piniling paraan ng pagsulat?'
+  };
+  document.querySelectorAll('.stand-option').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.stand-option').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    const response = document.getElementById('standResponse');
+    response.querySelector('.response-label').textContent = `PANIG: ${btn.dataset.stand.toUpperCase()}`;
+    response.querySelector('p').textContent = standMessages[btn.dataset.stand];
+  }));
+
+  // Countdown timer
+  const timerDisplay = document.getElementById('timerDisplay');
+  function renderTimer() {
+    timerDisplay.textContent = `${String(Math.floor(remaining/60)).padStart(2,'0')}:${String(remaining%60).padStart(2,'0')}`;
+  }
+  document.getElementById('timerStart').addEventListener('click', e => {
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; e.currentTarget.textContent = 'Ipagpatuloy'; return; }
+    e.currentTarget.textContent = 'I-pause';
+    timerInterval = setInterval(() => {
+      remaining--; renderTimer();
+      if (remaining <= 0) { clearInterval(timerInterval); timerInterval = null; e.currentTarget.textContent = 'Simulan muli'; showToast('Tapos na ang oras ng pag-iisip.'); }
+    }, 1000);
+  });
+  document.getElementById('timerReset').addEventListener('click', () => {
+    clearInterval(timerInterval); timerInterval = null; remaining = 120; renderTimer();
+    document.getElementById('timerStart').textContent = 'Simulan';
+  });
+
+  // Student/group response is local to the browser; nothing is uploaded.
+  document.getElementById('saveThought').addEventListener('click', () => {
+    const value = document.getElementById('groupThought').value.trim();
+    const preview = document.getElementById('thoughtPreview');
+    if (!value) { showToast('Sumulat muna ng inyong interpretasyon.'); return; }
+    preview.hidden = false; preview.textContent = value;
+    document.getElementById('saveStatus').textContent = 'Handa nang ibahagi sa klase.';
+    showToast('Naipakita ang inyong sagot sa screen.');
+  });
+
+  function resetActivities() {
+    resetClue(); resetSymbol(); resetFinal();
+    document.querySelectorAll('.stand-option').forEach(b => b.classList.remove('selected'));
+    document.getElementById('standResponse').querySelector('.response-label').textContent = 'GABAY SA TALAKAYAN';
+    document.getElementById('standResponse').querySelector('p').textContent = 'Pumili ng paninindigan. Bumuo ng isang dahilan at magbigay ng halimbawa mula sa tekstong nabasa o sa sariling karanasan.';
+    document.getElementById('groupThought').value = '';
+    document.getElementById('thoughtPreview').hidden = true;
+    document.getElementById('saveStatus').textContent = 'Hindi awtomatikong ipinapadala ang sagot.';
+    clearInterval(timerInterval); timerInterval = null; remaining = 120; renderTimer();
+    document.getElementById('timerStart').textContent = 'Simulan';
+  }
+  goTo(0);
+})();
+  </script>
+</body>
+</html>
